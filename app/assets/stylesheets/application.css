@@ -14,3 +14,14 @@
 body {
     padding-top: 60px;
 }
+
+h1 { font-size:16px;
+}
+    
+.status .admin {
+    display: none;
+}
+
+.status.hover .admin {
+    display: inline;
+}
