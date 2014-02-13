@@ -10,6 +10,7 @@ end
 
 # gems added by me
 gem 'devise'
+gem 'simple_form'
 
 
 # Use SCSS for stylesheets

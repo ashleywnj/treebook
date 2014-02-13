@@ -15,11 +15,14 @@ class StatusesController < ApplicationController
   # GET /statuses/new
   def new
     @status = Status.new
+    @user = User.new
   end
 
   # GET /statuses/1/edit
   def edit
   end
+
+
 
   # POST /statuses
   # POST /statuses.json
@@ -30,6 +33,7 @@ class StatusesController < ApplicationController
       if @status.save
         format.html { redirect_to @status, notice: 'Status was successfully created.' }
         format.json { render action: 'show', status: :created, location: @status }
+
       else
         format.html { render action: 'new' }
         format.json { render json: @status.errors, status: :unprocessable_entity }
