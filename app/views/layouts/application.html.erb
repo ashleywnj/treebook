@@ -8,29 +8,30 @@
 </head>
 <body>
     
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-inner">
       <div class="container">
           
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
+
 
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Treebook</a>
         </div>
-        <div class="nav-pills">
+
+
+        <div class="navbar-inner">
           <ul class="nav navbar-nav">
-
-
-
-
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <ul class="nav pull-right" >
+          <ul class="nav pull-right"
             <% if user_signed_in? %>
-                    <li><%= link_to current_user.full_name, edit_user_registration_path %> </li>
+                    <li class="nav-pills"><%= link_to current_user.full_name, edit_user_registration_path %> </li>
+
+
+
                     <li><%= link_to "log Out", destroy_user_session_path, :method => :DELETE %></li>
 
                 <% else %>
@@ -42,18 +43,22 @@
 
         </div><!--/.nav-collapse -->
       </div>
+     </div>
     </div>
     
     
-    <div class="container">
-          <div class="starter-template">
+<div class="container">
+
+  <% flash.each do |type, message| %>
+      <div class="alert <%= flash_class type %>">
+        <button class="close" data-dismiss="alert">x</button>
+        <%= message %>
+      </div>
+  <% end %>
               
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-              
-                <%= yield %>
-          </div>
-    </div>
+  <%= yield %>
+
+</div>
 
 </body>
 </html>
