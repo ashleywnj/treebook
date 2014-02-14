@@ -13,11 +13,11 @@
 
 
 
-  <%= current_user %>
-    <strong><%= @status.user.full_name  %></strong>
 
+
+<p>test to see if new is the post form</p>
   <div class="field">
-    <%= f.input :user_id, collection: User.all, label_method: :id  %>
+    <%= f.input :id, collection: User.all, label_method: :id  %>
     <%= f.label :content %><br>
     <%= f.text_area :content %>
   </div>

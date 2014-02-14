@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1155393221">
+  <component name="DataSourceManagerImpl" format="xml" hash="2068846587">
     <data-source source="LOCAL" name="Rails treebook: development" uuid="388af3cc-e5cb-484c-993e-336389ec401a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <schema-pattern>*</schema-pattern>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails treebook: development [2]" uuid="68695a7f-dd88-4e5d-8378-61ed10959a41">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
