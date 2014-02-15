@@ -8,6 +8,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 # gems added by me
 gem 'devise'
 gem 'simple_form'
