@@ -21,6 +21,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: db/treebook
+  database: treebook
   pool: 5
   timeout: 5000
