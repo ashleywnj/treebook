@@ -47,6 +47,7 @@ class StatusesController < ApplicationController
   # PATCH/PUT /statuses/1
   # PATCH/PUT /statuses/1.json
   def update
+    @status.user = current_user
     respond_to do |format|
       if @status.update(status_params)
         format.html { redirect_to @status, notice: 'Status was successfully updated.' }
